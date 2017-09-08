@@ -30,44 +30,44 @@ public class DeepDive01ForLoops
   @Test
   public void stringsNeedQuotes() throws Exception
   {
-    Assert.assertEquals("Green", ___);
+    Assert.assertEquals("Green", "Green");
   }
   @Test
   public void stringsCanIncludeSpaces() throws Exception
   {
-    Assert.assertEquals("This is a string", " ");
+    Assert.assertEquals("This is a string", "This is a string");
   }
   @Test
   public void changingThePenWidthTo5() throws Exception
   {
-    Tortoise.setPenWidth(____);
+    Tortoise.setPenWidth(5);
     Assert.assertEquals(5, Tortoise.getPenWidth());
   }
   @Test
   public void movingTheTortoise100Pixels() throws Exception
   {
     int start = Tortoise.getY();
-    Tortoise.move(____);
+    Tortoise.move(100);
     Assert.assertEquals(Tortoise.getY(), start - 100);
     // 'Hint: make sure you read the name of this method
   }
   @Test
   public void theTortoiseTurns21() throws Exception
   {
-    Tortoise.turn(____);
+    Tortoise.turn(21);
     Assert.assertEquals(21.0, Tortoise.getAngle(), 0.01);
   }
   @Test
   public void theTortoiseTurns15Twice() throws Exception
   {
-    Tortoise.turn(____);
-    Tortoise.turn(____);
+    Tortoise.turn(15);
+    Tortoise.turn(15);
     Assert.assertEquals(30.0, Tortoise.getAngle(), 0.01);
   }
   @Test
   public void howFastCanTheTortoiseGo() throws Exception
   {
-    Tortoise.setSpeed(____);
+    Tortoise.setSpeed(10);
     Assert.assertEquals(topSpeed, Tortoise.getSpeed());
     // 'Hint: Click SetSpeed then read the documentation on the left ----->
   }
@@ -75,19 +75,19 @@ public class DeepDive01ForLoops
   public void assigningVariables() throws Exception
   {
     int myFavoriteNumber = 101;
-    Assert.assertEquals(myFavoriteNumber, ____);
+    Assert.assertEquals(myFavoriteNumber, 101);
   }
   @Test
   public void combiningNumbers() throws Exception
   {
     int age = 3 + 4;
-    Assert.assertEquals(age, ____);
+    Assert.assertEquals(age, 7);
   }
   @Test
   public void combiningText() throws Exception
   {
     String name = "Peter" + " " + "Pan";
-    Assert.assertEquals(name, ___);
+    Assert.assertEquals(name, "Peter Pan");
   }
   @Test
   public void combiningTextAndNumbers() throws Exception
