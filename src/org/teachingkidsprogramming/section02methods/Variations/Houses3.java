@@ -23,10 +23,7 @@ public class Houses3
   {
     Tortoise.setPenColor(PenColors.Reds.DarkRed);
     Tortoise.move(height);
-    // darFlatRoof();
-    drawPointyRoof();
-    drawPointyRoof();
-    drawPointyRoof();
+    darFlatRoof();
     drawPointyRoof();
     drawPointyRoof();
     Tortoise.move(height);

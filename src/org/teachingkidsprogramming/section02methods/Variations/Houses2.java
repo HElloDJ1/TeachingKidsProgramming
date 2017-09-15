@@ -23,7 +23,7 @@ public class Houses2
   {
     Tortoise.setPenColor(PenColors.Reds.DarkRed);
     Tortoise.move(height);
-    // darFlatRoof();
+    //drawFlatRoof();
     drawPointyRoof();
     Tortoise.move(height);
     Tortoise.turn(-90);
@@ -38,7 +38,7 @@ public class Houses2
     Tortoise.move(15);
     Tortoise.turn(45);
   }
-  private static void darFlatRoof()
+  private static void drawFlatRoof()
   {
     Tortoise.turn(90);
     Tortoise.move(30);
