@@ -5,14 +5,16 @@ import java.util.Random;
 import org.teachingextensions.logo.Sound;
 import org.teachingextensions.logo.utils.EventUtils.MessageBox;
 
-public class HiLow
+// this variation tells how many guesses they have left
+public class HiLow2
 {
   public static void main(String[] args)
   {
     Random rand = new Random();
     int answer = rand.nextInt(100) + 1;
     //System.out.println("The answer is " + answer);
-    for (int i = 0; i < 8; i++)
+    int guesses = MessageBox.askForNumericalInput("How many guesses;");
+    for (int i = 0; i <= guesses; i++)
     {
       int guess = MessageBox.askForNumericalInput("What is ur guess");
       if (guess == answer)
@@ -24,6 +26,7 @@ public class HiLow
       else if (guess > answer)
       {
         MessageBox.showMessage("Too High :(");
+        MessageBox.showMessage("Errors left " + (guesses - i));
       }
       else
       {
@@ -31,7 +34,7 @@ public class HiLow
       }
       if (i == answer)
       {
-        MessageBox.showMessage("You Lost.You suck the answer was ___");
+        MessageBox.showMessage("You Lost.You suck the answer was " + answer);
       }
     }
   }
