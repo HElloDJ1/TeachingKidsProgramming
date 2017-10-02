@@ -13,14 +13,14 @@ public class HiLow2
     Random rand = new Random();
     int answer = rand.nextInt(100) + 1;
     //System.out.println("The answer is " + answer);
-    int guesses = MessageBox.askForNumericalInput("How many guesses;");
+    int guesses = MessageBox.askForNumericalInput("How many guesses d" + "o u want future daddy");
     for (int i = 0; i <= guesses; i++)
     {
       int guess = MessageBox.askForNumericalInput("What is ur guess");
       if (guess == answer)
       {
         Sound.playBeep();
-        MessageBox.showMessage("You Won!!!");
+        MessageBox.showMessage("You Won!!! UR MY DADDY NOW :)");
         break;
       }
       else if (guess > answer)
