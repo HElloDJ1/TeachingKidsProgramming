@@ -20,13 +20,13 @@ public class ConcentricLoop
       //      If i is divisible by 20 --(HINT: Use mod operator '%') --#7
       if (i % 20 == 0)
       {
-      }
-      for (int j = 0; j < 360; j++)
-      {
-        Tortoise.move(1);
-        Tortoise.turn(1);
-        Tortoise.setPenWidth(i / 100);
-        //          End Repeat --#8.2
+        for (int j = 0; j < 360; j++)
+        {
+          Tortoise.move(1);
+          Tortoise.turn(1);
+          Tortoise.setPenWidth(i / 100);
+          //          End Repeat --#8.2
+        }
       }
     }
   }
