@@ -7,7 +7,7 @@ import org.teachingextensions.logo.Tortoise;
 import org.teachingextensions.logo.utils.ColorUtils.PenColors;
 import org.teachingextensions.logo.utils.EventUtils.MessageBox;
 
-public class ChooseYourOwnAdventure2
+public class ChooseYourOwnAdventure1
 {
   public static void main(String[] args)
   {
@@ -40,11 +40,11 @@ public class ChooseYourOwnAdventure2
     MessageBox.showMessage(
         "You approach a glowing, green bucket of ooze. Worried that you will get in trouble, you pick up the bucket.");
     String answer = MessageBox.askForTextInput("Do you want to pour the ooze into the 'backyard' or 'toilet'?");
-    if ("toilet".equalsIgnoreCase("action"))
+    if ("toilet".equalsIgnoreCase(answer))
     {
-      pourIntoToilet(answer);
+      pourIntoToilet();
     }
-    else if ("backyard".equalsIgnoreCase("action"))
+    else if ("backyard".equalsIgnoreCase(answer))
     {
       pourIntoBackyard(answer);
     }
@@ -53,34 +53,41 @@ public class ChooseYourOwnAdventure2
       endStory();
     }
   }
-  private static void pourIntoBackyard(String action)
+  private static void pourIntoBackyard(String answer)
   {
     MessageBox.showMessage(
         "As you walk into the backyard a net scoops you up and a giant takes you to a boiling pot of water.");
-    String answer = MessageBox
-        .askForTextInput("As the man starts to prepare you as soup, do you...'Scream' or 'Faint'?");
-    if ("faint".equalsIgnoreCase(action))
+    MessageBox.askForTextInput("As the man starts to prepare you as soup, do you...'Scream' or 'Faint'?");
+    if ("faint".equalsIgnoreCase(answer))
     {
+      //                        Tell the user "You made a delicious soup! Yum! The end." --#21
+      MessageBox.showMessage("You made a delicious soup! Yum! The end.");
     }
-    else if ("scream".equalsIgnoreCase(action))
+    //                Otherwise, if they answer "scream" --#20.2
+    else if ("scream".equalsIgnoreCase(answer))
     {
+      //                    startStory --#22
+      startStory();
     }
+    //                Otherwise, if they answer anything else --#20.3
     else
     {
+      //                    endStory --#23
       endStory();
     }
+    //         ------------- End of pourIntoBackyard recipe --#19.3
   }
-  private static void pourIntoToilet(String action)
+  private static void pourIntoToilet()
   {
     MessageBox.showMessage(
         "As you pour the ooze into the toilet it backs up, gurgles, and explodes, covering you in radioactive waste.");
     String answer = MessageBox.askForTextInput("Do you want to train to be a NINJA?  'Yes' or 'HECK YES'?");
-    if ("Yes".equalsIgnoreCase(action))
+    if (answer.equalsIgnoreCase("yes"))
     {
       MessageBox
           .showMessage("Awesome dude!  You live out the rest of your life fighting crimes and eating pizza!");
     }
-    else if ("Heck Yes".equalsIgnoreCase(action))
+    else if (answer.equalsIgnoreCase("heck yes"))
     {
       MessageBox
           .showMessage("Awesome dude!  You live out the rest of your life fighting crimes and eating pizza!");
