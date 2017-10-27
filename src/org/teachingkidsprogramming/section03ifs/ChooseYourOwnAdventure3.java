@@ -42,7 +42,7 @@ public class ChooseYourOwnAdventure3
     String answer = MessageBox.askForTextInput("Do you want to pour the ooze into the 'backyard' or 'toilet'?");
     if ("toilet".equalsIgnoreCase(answer))
     {
-      pourIntoToilet();
+      pourIntoToilet(answer);
     }
     else if ("backyard".equalsIgnoreCase(answer))
     {
@@ -69,24 +69,20 @@ public class ChooseYourOwnAdventure3
       endStory();
     }
   }
-  private static void pourIntoToilet()
+  private static void pourIntoToilet(String answer)
   {
     MessageBox.showMessage(
         "As you pour the ooze into the toilet it backs up, gurgles, and explodes, covering you in radioactive waste.");
     MessageBox.askForTextInput("Do you want to train to be a NINJA?  'Yes' or 'HECK YES'?");
-    if ("Yes".equalsIgnoreCase("answer"))
+    if ("Yes".equalsIgnoreCase(answer))
     {
       MessageBox
           .showMessage("Awesome dude!  You live out the rest of your life fighting crimes and eating pizza!");
     }
-    else if ("HECK YES".equalsIgnoreCase("answer"))
+    else if ("HECK YES".equalsIgnoreCase(answer))
     {
       MessageBox
           .showMessage("Awesome dude!  You live out the rest of your life fighting crimes and eating pizza!");
-    }
-    else
-    {
-      endStory();
     }
   }
   private static void wakeUp()
