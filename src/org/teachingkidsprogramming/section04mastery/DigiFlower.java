@@ -11,7 +11,6 @@ public class DigiFlower
   public static void main(String[] args)
   {
     Tortoise.show();
-    //    Make the tortoise move as fast as possible --#7
     Tortoise.setSpeed(10);
     //    Make the background silver  --#8
     //    Make the line the tortoise draws 3 pixels wide --#15
