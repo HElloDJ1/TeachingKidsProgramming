@@ -11,7 +11,6 @@ public class PentagonCrazy
     Tortoise.show();
     Tortoise.setSpeed(10);
     createColorPalette();
-    //
     drawPentagon();
   }
   private static void drawPentagon()

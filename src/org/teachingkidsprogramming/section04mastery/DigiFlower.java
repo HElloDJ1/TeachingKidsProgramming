@@ -13,7 +13,6 @@ public class DigiFlower
     Tortoise.show();
     Tortoise.setSpeed(10);
     Tortoise.getBackgroundWindow().setBackground(PenColors.Grays.Silver);
-    //    Make the line the tortoise draws 3 pixels wide --#15
     Tortoise.setPenWidth(3);
     for (int i = 0; i < 15; i++)
     {
@@ -21,7 +20,6 @@ public class DigiFlower
       drawOctogon();
       Tortoise.turn(360 / 15);
     }
-    //
   }
   private static void drawOctogon()
   {
