@@ -7,14 +7,12 @@ import org.teachingextensions.logo.utils.ColorUtils.ColorWheel;
 import org.teachingextensions.logo.utils.ColorUtils.PenColors;
 import org.teachingextensions.logo.utils.EventUtils.MouseLeftClickListener;
 import org.teachingextensions.logo.utils.LineAndShapeUtils.Circle;
-import org.teachingextensions.virtualproctor.VirtualProctor;
 
 public class SimpleBubble implements MouseLeftClickListener
 {
   ProgramWindow programWindow;
   public SimpleBubble()
   {
-    VirtualProctor.setName("Alexis L.");
     programWindow = new ProgramWindow("My Bubble");
     programWindow.setWindowVisible(true);
     programWindow.addMouseLeftClickListener(this);
@@ -34,7 +32,7 @@ public class SimpleBubble implements MouseLeftClickListener
   }
   private void createBubble(int x, int y)
   {
-    // programWindow.clearWindow();
+    programWindow.clearWindow();
     Random random = new Random();
     int radius = random.nextInt(41) + 10;
     Circle circle = new Circle(radius, ColorWheel.getNextColor());
